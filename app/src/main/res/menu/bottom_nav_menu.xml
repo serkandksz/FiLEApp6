@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/siparis"
+        android:title="Sipariş"
+        android:icon="@drawable/ic_action_siparis">
+    </item>
+
+    <item android:id="@+id/search"
+        android:title="Ara"
+        android:icon="@drawable/ic_action_ara">
+    </item>
+
+    <item android:id="@+id/sepetim"
+        android:title="Sepetim"
+        android:icon="@drawable/ic_action_sepetim">
+    </item>
+
+    <item android:id="@+id/kampanyalar"
+        android:title="Kampanyalar"
+        android:icon="@drawable/ic_action_kampanya">
+    </item>
+
+    <item android:id="@+id/diger"
+        android:title="Diğer"
+        android:icon="@drawable/ic_action_diger">
+    </item>
+</menu>

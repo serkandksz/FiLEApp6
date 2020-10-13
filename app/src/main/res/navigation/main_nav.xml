@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/digerFragment"
+        android:name="com.serkan.fileapp.fragments.DigerFragment"
+        android:label="fragment_diger"
+        tools:layout="@layout/fragment_diger" >
+        <action
+            android:id="@+id/action_digerFragment_to_sepetimFragment"
+            app:destination="@id/sepetimFragment" />
+        <action
+            android:id="@+id/action_digerFragment_to_kampanyalarFragment"
+            app:destination="@id/kampanyalarFragment" />
+        <action
+            android:id="@+id/action_digerFragment_to_siparisFragment"
+            app:destination="@id/siparisFragment" />
+        <action
+            android:id="@+id/action_digerFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_digerFragment_to_chosenOptionFragment"
+            app:destination="@id/chosenOptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kampanyalarFragment"
+        android:name="com.serkan.fileapp.fragments.KampanyalarFragment"
+        android:label="fragment_kampanyalar"
+        tools:layout="@layout/fragment_kampanyalar" >
+        <action
+            android:id="@+id/action_kampanyalarFragment_to_siparisFragment"
+            app:destination="@id/siparisFragment" />
+        <action
+            android:id="@+id/action_kampanyalarFragment_to_sepetimFragment"
+            app:destination="@id/sepetimFragment" />
+        <action
+            android:id="@+id/action_kampanyalarFragment_to_digerFragment"
+            app:destination="@id/digerFragment" />
+        <action
+            android:id="@+id/action_kampanyalarFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_kampanyalarFragment_to_chosenOptionFragment"
+            app:destination="@id/chosenOptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetimFragment"
+        android:name="com.serkan.fileapp.fragments.SepetimFragment"
+        android:label="fragment_sepetim"
+        tools:layout="@layout/fragment_sepetim" >
+        <action
+            android:id="@+id/action_sepetimFragment_to_digerFragment"
+            app:destination="@id/digerFragment" />
+        <action
+            android:id="@+id/action_sepetimFragment_to_kampanyalarFragment"
+            app:destination="@id/kampanyalarFragment" />
+        <action
+            android:id="@+id/action_sepetimFragment_to_siparisFragment"
+            app:destination="@id/siparisFragment" />
+        <action
+            android:id="@+id/action_sepetimFragment_to_digerFragment2"
+            app:destination="@id/digerFragment" />
+        <action
+            android:id="@+id/action_sepetimFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_sepetimFragment_to_chosenOptionFragment"
+            app:destination="@id/chosenOptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/siparisFragment"
+        android:name="com.serkan.fileapp.fragments.SiparisFragment"
+        android:label="fragment_siparis"
+        tools:layout="@layout/fragment_siparis" >
+        <action
+            android:id="@+id/action_siparisFragment_to_kampanyalarFragment"
+            app:destination="@id/kampanyalarFragment" />
+        <action
+            android:id="@+id/action_siparisFragment_to_sepetimFragment"
+            app:destination="@id/sepetimFragment" />
+        <action
+            android:id="@+id/action_siparisFragment_to_digerFragment"
+            app:destination="@id/digerFragment" />
+        <action
+            android:id="@+id/action_siparisFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_siparisFragment_to_chosenOptionFragment"
+            app:destination="@id/chosenOptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.serkan.fileapp.fragments.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_siparisFragment"
+            app:destination="@id/siparisFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_kampanyalarFragment"
+            app:destination="@id/kampanyalarFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_digerFragment"
+            app:destination="@id/digerFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_sepetimFragment"
+            app:destination="@id/sepetimFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_chosenOptionFragment"
+            app:destination="@id/chosenOptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chosenOptionFragment"
+        android:name="com.serkan.fileapp.fragments.ChosenOptionFragment"
+        android:label="ChosenOptionFragment" >
+        <action
+            android:id="@+id/action_chosenOptionFragment_to_siparisFragment"
+            app:destination="@id/siparisFragment" />
+        <action
+            android:id="@+id/action_chosenOptionFragment_to_kampanyalarFragment"
+            app:destination="@id/kampanyalarFragment" />
+        <action
+            android:id="@+id/action_chosenOptionFragment_to_sepetimFragment"
+            app:destination="@id/sepetimFragment" />
+        <action
+            android:id="@+id/action_chosenOptionFragment_to_digerFragment"
+            app:destination="@id/digerFragment" />
+        <action
+            android:id="@+id/action_chosenOptionFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+</navigation>

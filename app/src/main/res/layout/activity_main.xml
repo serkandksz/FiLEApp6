@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav"
+        android:background="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLoginBackg">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logo"
+                android:layout_centerHorizontal="true">
+
+            </ImageView>
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <ImageView
+        android:id="@+id/konum"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/ic_konum"
+        android:layout_below="@id/toolbar">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_toEndOf="@+id/konum"
+        android:layout_toStartOf="@id/saat"
+        android:background="@color/colorLoginBackg"
+        android:text="Ekinci Mah. Şark Cad. No:21 Antakya/Hatay"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:paddingTop="5dp">
+
+    </TextView>
+    <ImageView
+        android:id="@+id/saat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/ic_saat"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentRight="true">
+
+    </ImageView>
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_nav"
+        android:layout_below="@id/saat"
+        android:layout_above="@id/bottom_nav"/>
+
+
+</RelativeLayout>

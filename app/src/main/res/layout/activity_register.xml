@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/colorLoginBackg"
+    android:id="@+id/relative_lay">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kayıt Ol"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/text_view"
+        android:layout_marginTop="70dp">
+
+    </TextView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        app:cardCornerRadius="5dp"
+        android:layout_below="@+id/text_view"
+        android:layout_marginTop="60dp"
+        app:cardBackgroundColor="@color/colorLoginTel"
+        android:backgroundTint="@color/colorLoginTel"
+        android:outlineAmbientShadowColor="@color/colorLoginBackg">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:hint="Ad Soyad"
+            android:textSize="15sp"
+            android:inputType="number"
+            android:layout_marginStart="7dp"
+            android:background="@color/colorLoginTel"
+            android:textAlignment="textStart">
+
+        </EditText>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        app:cardCornerRadius="5dp"
+        android:layout_below="@+id/cardV"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/colorLoginTel"
+        android:backgroundTint="@color/colorLoginTel"
+        android:outlineAmbientShadowColor="@color/colorLoginBackg">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:hint="E-Posta"
+            android:textSize="15sp"
+            android:inputType="textEmailAddress"
+            android:layout_marginStart="7dp"
+            android:background="@color/colorLoginTel"
+            android:textAlignment="textStart">
+
+        </EditText>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        app:cardCornerRadius="5dp"
+        android:layout_below="@+id/cardV2"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/colorLoginTel"
+        android:backgroundTint="@color/colorLoginTel"
+        android:outlineAmbientShadowColor="@color/colorLoginBackg">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:hint="Şifre"
+            android:textSize="15sp"
+            android:inputType="textPassword"
+            android:layout_marginStart="7dp"
+            android:background="@color/colorLoginTel"
+            android:textAlignment="textStart">
+
+        </EditText>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        app:cardCornerRadius="5dp"
+        android:layout_below="@+id/cardV3"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/colorLoginTel"
+        android:backgroundTint="@color/colorLoginTel"
+        android:outlineAmbientShadowColor="@color/colorLoginBackg">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:hint="Şifre Tekrar"
+            android:textSize="15sp"
+            android:inputType="textPassword"
+            android:layout_marginStart="7dp"
+            android:background="@color/colorLoginTel"
+            android:textAlignment="textStart">
+
+        </EditText>
+
+    </androidx.cardview.widget.CardView>
+
+    <CheckBox
+        android:id="@+id/check1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardV4"
+        android:layout_marginLeft="32dp"
+        android:buttonTint="@color/colorWhite"
+        android:layout_marginTop="7dp">
+
+    </CheckBox>
+    <CheckBox
+        android:id="@+id/check2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/check1"
+        android:layout_marginLeft="32dp"
+        android:buttonTint="@color/colorWhite"
+        android:layout_marginTop="3dp">
+
+    </CheckBox>
+
+
+
+    <Button
+
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:background="@drawable/login_button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="Kayıt Ol"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite">
+
+    </Button>
+
+
+
+
+</RelativeLayout>

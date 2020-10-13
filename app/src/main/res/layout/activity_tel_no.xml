@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/colorLoginBackg"
+    android:id="@+id/relative_lay">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/logo_view"
+        android:layout_marginTop="100dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/textViw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMS yollanacak telefon numarasını giriniz."
+        android:layout_below="@+id/logo_view"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp">
+
+    </TextView>
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        app:cardCornerRadius="5dp"
+        android:layout_below="@+id/textViw"
+        android:layout_marginTop="15dp"
+        app:cardBackgroundColor="@color/colorLoginTel"
+        android:backgroundTint="@color/colorLoginTel"
+        android:outlineAmbientShadowColor="@color/colorLoginBackg">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Telefon"
+            android:inputType="number"
+            android:layout_marginStart="7dp"
+            android:background="@color/colorLoginTel"
+            android:textAlignment="textStart">
+
+        </EditText>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:indeterminate="true"
+        android:layout_marginHorizontal="45dp"
+        android:layout_below="@+id/cardV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:mpb_progressStyle="horizontal"
+
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal" />
+
+
+    <Button
+
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:background="@drawable/login_button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="Devam Et"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite">
+
+    </Button>
+
+
+
+
+</RelativeLayout>
