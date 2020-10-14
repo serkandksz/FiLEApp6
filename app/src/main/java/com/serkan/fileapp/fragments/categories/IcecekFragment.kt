@@ -1,4 +1,4 @@
-package com.serkan.fileapp.fragments
+package com.serkan.fileapp.fragments.categories
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,14 +11,14 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.serkan.fileapp.R
 import com.serkan.fileapp.adapters.ProductsAdapter
 import com.serkan.fileapp.viewmodel.ChosenCategoryViewModel
-import kotlinx.android.synthetic.main.fragment_chosen_option.*
 import kotlinx.android.synthetic.main.fragment_diger.*
+import kotlinx.android.synthetic.main.fragment_icecek.*
 
 
-class DigerFragment : Fragment() {
+class IcecekFragment : Fragment() {
 
-
-
+    private lateinit var viewModel: ChosenCategoryViewModel
+    private val productAdapter = ProductsAdapter(arrayListOf())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,12 +30,27 @@ class DigerFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_diger, container, false)
+        return inflater.inflate(R.layout.fragment_icecek, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel = ViewModelProviders.of(this).get(ChosenCategoryViewModel::class.java)
+        viewModel.getDataFromRoom()
+
+        recyclerViewIcecek.layoutManager = GridLayoutManager(context,3)
+        recyclerViewIcecek.adapter = productAdapter
+
+        observeLiveData()
+    }
+    private fun observeLiveData() {
+        viewModel.productIcecek.observe(viewLifecycleOwner, Observer { product ->
+            product?.let {
+                recyclerViewIcecek.visibility = View.VISIBLE
+                productAdapter.updateProductList(product)
+            }
+        })
     }
 
 }

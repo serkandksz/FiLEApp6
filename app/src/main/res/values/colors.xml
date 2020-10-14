@@ -9,4 +9,5 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
     <color name="colorSiparisBackg">#EDEDED</color>
+    <color name="colorTabBackg">#FB7610</color>
 </resources>

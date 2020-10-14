@@ -25,7 +25,7 @@ class ProductsAdapter(val productsList: ArrayList<Products>): RecyclerView.Adapt
     }
 
     override fun onBindViewHolder(holder: ProductsViewHolder, position: Int) {
-        holder.view.product_name.text = productsList[position].productName
+        holder.view.product_name.text = productsList[position].productBrand
         holder.view.firstCost.text = productsList[position].productFirstCost
         holder.view.secondCost.text = productsList[position].productSecondCost
         holder.view.unit.text = productsList[position].productUnit

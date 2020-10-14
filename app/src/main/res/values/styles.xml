@@ -9,6 +9,14 @@
 
     </style>
 
+    <style name="TabLayout.Theme" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorLoginButton</item>
+        <item name="tabIndicatorHeight">4dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="tabSelectedTextColor">@color/colorWhite</item>
+        <item name="tabBackground">@color/colorLoginBackg</item>
+    </style>
+
 
 
 
